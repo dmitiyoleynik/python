@@ -86,9 +86,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': '{{{NAME}}}', #os.path.join(BASE_DIR, 'mysql'),
-        'USER':'{{{USER}}}}',#'admin',
-        'PASSWORD':'{{{PASS}}}',#'rootpwd111',
-        'HOST':'{{{HOST}}}',#'database-1.cufxoqeuddnk.eu-central-1.rds.amazonaws.com',
+        'USER':'{{{USER}}}}', #'admin',
+        'PASSWORD':'{{{PASS}}}', #'rootpwd111',
+        'HOST':'{{{HOST}}}', #'database-1.cufxoqeuddnk.eu-central-1.rds.amazonaws.com',
     }
 }
 
