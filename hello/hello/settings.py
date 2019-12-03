@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#add allowed_host
+
+from requests import get
+
+ip = get('https://api.ipify.org').text
+
+ALLOWED_HOSTS.append(ip)
+
 
 # Application definition
 
@@ -77,10 +85,10 @@ WSGI_APPLICATION = 'hello.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.path.join(BASE_DIR, 'mysql'),
-        'USER':'admin',
-        'PASSWORD':'rootpwd',
-        'HOST':'database-1.cufxoqeuddnk.eu-central-1.rds.amazonaws.com',
+        'NAME': '{{{NAME}}}', #os.path.join(BASE_DIR, 'mysql'),
+        'USER':'{{{USER}}}}',#'admin',
+        'PASSWORD':'{{{PASS}}}',#'rootpwd111',
+        'HOST':'{{{HOST}}}',#'database-1.cufxoqeuddnk.eu-central-1.rds.amazonaws.com',
     }
 }
 
